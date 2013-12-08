@@ -27,7 +27,6 @@
 {
     [super viewDidLoad];
 	// Do any additional setup after loading the view.
-    NSLog(@"viewDidLoad");
     SVWebViewController *webViewController = [[SVWebViewController alloc] initWithAddress:@"http://eventstore.co.kr"];
     [self setViewControllers:@[webViewController] animated:NO];
 }

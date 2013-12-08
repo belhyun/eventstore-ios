@@ -7,10 +7,10 @@
 //  https://github.com/samvermette/SVWebViewController
 
 #import "SVModalWebViewController.h"
+#import "MBProgressHUD.h"
 
-@interface SVWebViewController : UIViewController
-
+@interface SVWebViewController : UIViewController <MBProgressHUDDelegate>
+@property (strong, nonatomic) MBProgressHUD *HUD;
 - (id)initWithAddress:(NSString*)urlString;
 - (id)initWithURL:(NSURL*)URL;
-
 @end

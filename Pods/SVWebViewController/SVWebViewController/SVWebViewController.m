@@ -72,6 +72,10 @@
 
 - (void)viewDidLoad {
 	[super viewDidLoad];
+    self.HUD = [[MBProgressHUD alloc] initWithView:self.view];
+    [self.view addSubview:self.HUD];
+    self.HUD.delegate = self;
+    [self.HUD show:YES];
     [self updateToolbarItems];
 }
 
@@ -231,6 +235,7 @@
 
 
 - (void)webViewDidFinishLoad:(UIWebView *)webView {
+    [self.HUD hide:YES];
 	[[UIApplication sharedApplication] setNetworkActivityIndicatorVisible:NO];
     
     self.navigationItem.title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];

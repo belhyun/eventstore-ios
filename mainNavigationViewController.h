@@ -8,7 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "SVWebViewController.h"
+#import "MBProgressHUD.h"
 
 @interface mainNavigationViewController : UINavigationController
-
 @end
